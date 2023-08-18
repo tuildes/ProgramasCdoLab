@@ -9,6 +9,8 @@ int main () {
 	atual=1;
 	anterior=0;
 
+	printf("0, ");
+
 	for (cont1=1; cont1<=quantidade; cont1++) {
 		int temp;
 
