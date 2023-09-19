@@ -95,7 +95,8 @@ int eh_numero (char c) {
 
 int main (int argc, char *argv[]) {
 
-	int resultado, i;
+	float resultado;
+	int i;
 	int continuar = 1;
 
 	struct pilha calculadora;
@@ -168,6 +169,7 @@ int main (int argc, char *argv[]) {
 		//Fazer as contas da calculadora
 
 		int primeiro = 0;
+		int divisaoContraria = 0;
 
 		for (int j=0; j<=calculadora.topo; j++) {
 
@@ -190,7 +192,18 @@ int main (int argc, char *argv[]) {
 						};
 
 						if (calculadora.pilha[j] == '/') {
-								resultado /= ((calculadora.pilha[m] - '0'));
+
+								if (calculadora.pilha[m] == '0') {
+									printf("\033[0;31mDIVISAO POR ZERO\n");
+									return 1;
+								};
+
+								if (divisaoContraria) {
+									resultado = (calculadora.pilha[m] - '0') / resultado;
+									divisaoContraria = 0;
+								} else {
+									resultado /= (calculadora.pilha[m] - '0');
+								};
 						};
 
 						if (primeiro) {
@@ -203,6 +216,8 @@ int main (int argc, char *argv[]) {
 
 						} else {
 							resultado = calculadora.pilha[m] - '0';
+							if (calculadora.pilha[m+1] == '/') 
+								divisaoContraria = 1;
 							primeiro = 1;
 							// printf("%c", calculadora.pilha[m]);
 							calculadora.pilha[m] = 'n';
@@ -212,7 +227,7 @@ int main (int argc, char *argv[]) {
 			};
 		};
 
-		printf("\nResultado: %d\n", resultado);
+		printf("Resultado: %f\n", resultado);
 
 
 	} else {
