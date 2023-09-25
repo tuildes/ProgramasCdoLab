@@ -1,0 +1,49 @@
+sizeof(var) retorna o tamanho de uma variavel em bytes
+sizeof(char) // retorna 1
+        int // retorna 4
+
+tamanho variavel de array
+    alocação dinâmica
+
+    É possível alocar por vetor[n]
+        por conta do gcc
+        nao deveria funcionar
+
+    o programa define a alocação na compilação
+        - estático
+        - dinamico
+
+    vetor dinamico - na area dinamica (pode aumentar e diminuir)
+
+---
+
+definir um vetor
+    int *vetor
+
+    // stdlib
+    vetor = malloc(10*sizeof(int)) // Memory ALLOCation
+
+    // nao eh liberado sozinho
+    // malloc ponteiro para void - mudar o tipo - cast do tipo
+
+    vetor (int *) malloc (n * sizeof(char))
+
+    compressao maxima
+
+    retorna NULL quando deu errado a alocação
+
+        if (vetor == NULL)
+            return 1; //termina a main
+
+    free(vetor); **
+
+    CALLOC - faz a mesma coisa, com 2 parametros, quantidade e o tipo
+        calloc (n, sizeof(int))
+
+    realloc - mudar o tamanho da area alocada
+        realloc (vetor*, tamanho-novo)
+        // tentar alocar na proxima posicao
+        // copia o pedaco para outro lugar
+            // as vezes nao faz o free em outro lugar **
+
+    // refazer fila circular e pilha em malloc

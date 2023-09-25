@@ -1,0 +1,20 @@
+TADS - pilha
+TADS - fila
+    primeiro a entrar, o primeiro a sair
+    remover o 1, e deslocar todo o resto
+    ou fazer o inicio mudar
+        trazer so para frente, quando chegar no final
+        menos custoso
+
+
+Metodo 2
+    "vetor circular",
+    fila circular, que quando o fim ultrapassa ele volta pra 0, e o inicio igual. So vai estar cheio se o fim+1 = inicio. Sempre respeitando o limite do array
+    fim = inicio. Vazia
+        sem deslocamento
+                1 campo vazio.
+        fim % mo    d 12. Para descobrir a posicao nele.
+
+TADS - tipo abstrato, o usuario nao sabe como funciona.
+
+prox ep: lista.

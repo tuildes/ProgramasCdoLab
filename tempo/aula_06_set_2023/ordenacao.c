@@ -42,17 +42,17 @@ void selection_sort_r (int v[], int tam, int ini) {
 
 void insertion_sort_i (int v[], int tam) {
 
-	int temp;
+	int temp, j;
 
 	for (int i=1; i<tam; i++) {
-		//atual = i;
+		j = i-1;
+		temp = v[i];
 
-		while ((v[i] < v[i-1]) && (i>0)) {
-			temp = v[i];
-			v[i] = v[i-1];
-			v[i-1] = temp;
-			i--;
+		while ((temp < v[j]) && (j>=0)) {
+			v[j+1] = v[j];
+			j--;
 		};
+		v[j+1] = temp;
 	};
 
 };

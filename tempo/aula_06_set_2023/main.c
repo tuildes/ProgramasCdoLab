@@ -46,9 +46,9 @@ int main(){
        selection_sort_i (v, n);
     */
 
-	selection_sort_i (v, n);
+	//selection_sort_i (v, n);
 	//selection_sort_r (v, n, 0);
-	//insertion_sort_i (v,n);
+	insertion_sort_i (v,n);
 
 
     fim = clock();
