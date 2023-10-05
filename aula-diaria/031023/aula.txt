@@ -1,0 +1,38 @@
+operador ternaro
+    condicao ? valor_verdadero : valor_falso
+
+    return (a<b) ? a : b;
+
+macros
+    #DEFINE PI 3.14
+    #DEFINE MULT(A,B) ((A)*(B)) -> abuse dos parenteses
+
+    Execucao mais rapida que funcao
+    podendo fazer ternario
+    no pre processaento (compilacao) - substituicao direta.
+        nao empilha o estado atual para fazer a funcao
+
+    -l - forçar a inclusao da biblioteca
+    -lm - forçar a inclusao da biblioteca de matematica
+
+    nao faz contas basicas, dependendo do caso
+    mult(a,b) -> a*b
+    multi(a+1, b+2) -> a+1*b+2 -> a + b + 2
+        por isso usar parenteses
+
+LISTA
+    struct com uma lista encadeada
+        com ponteiro para o inicio da lista
+
+    lista encadeada dupla
+        Permitir tanto a ida, quanto a volta.
+
+Lista
+    1 - so a cabeça com as infos
+    2 - lista encadeada e todo o restante tbm
+    ter um id;
+    pode ser feita de forma circular
+
+    ordenar lista. Ter uma cabeça com essas infos.
+        ordenar ponteiros
+        ordenar as infos
