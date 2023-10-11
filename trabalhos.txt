@@ -1,0 +1,9 @@
+1. racionais
+2. tad pilha
+3. tad fila
+3. tad conjuntos
+4. tad lista
+
+5. trabalho grande
+
+-> biblioteca -> a de ponteiros
