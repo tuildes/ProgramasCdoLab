@@ -41,6 +41,25 @@ lista* busca_lista (lista *l, int dado) {
     return NULL;
 }
 
+void remover_lista_num (lista *l, int posicao) {
+
+        lista *p, *q;
+        int i=1;
+
+        p = l;
+        q = l->prox;
+        while (q != NULL && i != posicao) {
+            p = q;
+            q = q->prox;
+            i++;
+        }
+
+        if (q != NULL) {
+            p->prox = q->prox;
+            free (q);
+        }
+};
+
 // Imprimir lista
 void imprimir_lista (lista *l) {
     lista *p;
