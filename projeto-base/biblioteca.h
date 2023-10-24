@@ -5,5 +5,12 @@
 #include <math.h>
 #include <time.h>
 
-// Path: projeto-base/estruturas.h
-// Funções da biblioteca.c"
+// Defines de todo o projeto
+
+/*
+    Path: projeto-base/estruturas.h
+    Funções da biblioteca.c"
+*/
+
+/* Comentario do tipo divisao de classificacao */
+/* Comentario do tipo divisao de classificacao */
