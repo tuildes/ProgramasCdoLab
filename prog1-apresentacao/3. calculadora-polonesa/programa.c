@@ -2,6 +2,13 @@
 
 int main (int argc, char *argv[]) {
 
+	if (argc != 2) {
+		// Se o tamanho da entrada for diferente do esperado
+		printf("\nO formato deve ser ./programa \"(a*(b+c))\"\n");
+		printf("Sendo todos a, b, c... Todos inteiros de 0 a 9\n");
+		return 1;
+	}
+
     float resultado;
 	int i;
 	int continuar = 1;
@@ -138,11 +145,7 @@ int main (int argc, char *argv[]) {
 		printf("Resultado: %f\n", resultado);
 
 
-	} else {
-        // Se o tamanho da entrada for diferente do esperado
-		printf("\nO formato deve ser ./calculadora \"(a*(b+c))\"\n");
-		printf("Sendo todos a, b, c... Todos inteiros de 0 a 9\n");
-	}
+	};
 
 	return 0;
 }

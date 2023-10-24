@@ -5,6 +5,12 @@ int main (int argc, char *argv[]) {
     struct fila cheia;
     struct pilha invertida;
 
+    // Incialziar as struct
+    cheia.inicio = 0;
+    cheia.final = 0;
+
+    invertida.topo = 0;
+
     // Encher a fila
     for (int i=0; i<5; i++)
         inserirFila(&cheia, i);
